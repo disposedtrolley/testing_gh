@@ -10,3 +10,7 @@ components:
   schemas:
     GreetingObject:
       $ref: schemas/GreetingObject.yaml
+x-zendesk-owner:
+  channel: redback-team
+  name: redback
+
