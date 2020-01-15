@@ -1,0 +1,22 @@
+openapi: 3.0.2
+info:
+  title: Hello World REST APIs
+  version: "1.0"
+paths:
+  /api/v2/greetings.json:
+    $ref: paths/v2/greetings/greetings.yaml
+  /api/v2/greetings/{id}.json:
+    $ref: paths/v2/greetings/greetings_by_id.yaml
+components:
+  examples:
+    GreetingsArrayExample:
+      $ref: examples/GreetingsArrayExample.yaml
+  schemas:
+    GreetingsObject:
+      $ref: schemas/GreetingsObject.yaml
+tags:
+  - name: MyTag
+    externalDocs:
+      url: docs/tags/MyTag.md
+externalDocs:
+  url: docs/RootDoc.md

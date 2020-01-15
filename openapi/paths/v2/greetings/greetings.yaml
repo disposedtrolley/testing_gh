@@ -1,0 +1,18 @@
+get:
+  operationId: listGreetings
+  externalDocs:
+    url: ../../../docs/operations/ListGreetings.md
+  responses:
+    "200":
+      content:
+        application/json:
+          examples:
+            GreetingsArrayExample:
+              $ref: ../../../examples/GreetingsArrayExample.yaml
+          schema:
+            properties:
+              data:
+                items:
+                  $ref: ../../../schemas/GreetingsObject.yaml
+                type: array
+      description: List different greetings
