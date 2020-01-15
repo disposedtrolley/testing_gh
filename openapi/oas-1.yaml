@@ -1,0 +1,12 @@
+openapi: 3.0.2
+info:
+  description: Hello World REST APIs
+  title: Hello World REST APIs
+  version: "1.0"
+paths:
+  /greetings:
+    $ref: paths/greetings/greetings.yaml
+components:
+  schemas:
+    GreetingObject:
+      $ref: schemas/GreetingObject.yaml

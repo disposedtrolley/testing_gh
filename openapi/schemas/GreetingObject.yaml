@@ -1,0 +1,10 @@
+properties:
+  attributes:
+    properties:
+      description:
+        type: string
+  id:
+    type: string
+  type:
+    default: greeting
+    type: string

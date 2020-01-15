@@ -1,0 +1,57 @@
+openapi: 3.0.2
+info:
+  description: Hello World REST APIs
+  title: Hello World REST APIs
+  version: "1.0"
+paths:
+  /greetings:
+    get:
+      description: Lists greetings
+      operationId: listGreetings
+      responses:
+        "200":
+          content:
+            application/json:
+              example: |
+                {
+                  data: [
+                    {
+                      type: "greeting",
+                      id: "hello",
+                      attributes: {
+                        description: "common hello"
+                      }
+                    },
+                    {
+                      type: "greeting",
+                      id: "hi!",
+                      attributes: {
+                        description: "informal hello"
+                      }
+                    },
+                  ]
+                }
+              schema:
+                properties:
+                  data:
+                    items:
+                      $ref: '#/components/schemas/GreetingObject'
+                    type: array
+          description: List different greetings
+      summary: greetings
+      tags:
+      - myTag
+components:
+  schemas:
+    GreetingObject:
+      properties:
+        attributes:
+          properties:
+            description:
+              type: string
+        id:
+          type: string
+        type:
+          default: greeting
+          type: string
+
