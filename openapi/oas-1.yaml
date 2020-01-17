@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  description: Hello World REST APIs
+  description: Hello World REST APIs v2
   title: Hello World REST APIs
   version: "1.0"
 paths:
