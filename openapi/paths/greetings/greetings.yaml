@@ -1,0 +1,36 @@
+get:
+  description: Lists greetings
+  operationId: listGreetings
+  summary: "greetings"
+  responses:
+    "200":
+      content:
+        application/json:
+          example: |
+            {
+              data: [
+                {
+                  type: "greeting",
+                  id: "hello",
+                  attributes: {
+                    description: "common hello"
+                  }
+                },
+                {
+                  type: "greeting",
+                  id: "hi!",
+                  attributes: {
+                    description: "informal hello"
+                  }
+                },
+              ]
+            }
+          schema:
+            properties:
+              data:
+                items:
+                  $ref: ../../schemas/GreetingObject.yaml
+                type: array
+      description: List different greetings
+  tags:
+  - myTag

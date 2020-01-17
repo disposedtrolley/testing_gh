@@ -1,22 +1,23 @@
 openapi: 3.0.2
 info:
+  description: Hello World REST APIs
   title: Hello World REST APIs
   version: "1.0"
 paths:
-  /api/v2/greetings.json:
-    $ref: paths/v2/greetings/greetings.yaml
-  /api/v2/greetings/{id}.json:
-    $ref: paths/v2/greetings/greetings_by_id.yaml
+  /greetings:
+    $ref: paths/greetings/greetings.yaml
 components:
-  examples:
-    GreetingsArrayExample:
-      $ref: examples/GreetingsArrayExample.yaml
   schemas:
-    GreetingsObject:
-      $ref: schemas/GreetingsObject.yaml
+    GreetingObject:
+      $ref: schemas/GreetingObject.yaml
 tags:
-  - name: MyTag
+  - description: This is the description for the myTag tag
     externalDocs:
       url: docs/tags/MyTag.md
-externalDocs:
-  url: docs/RootDoc.md
+      x-embedded-doc: |-
+        # MyTag
+
+        This is the test external Markdown doc for the `MyTag` tag object.
+    name: myTag
+x-zendesk-owner:
+  name: something
