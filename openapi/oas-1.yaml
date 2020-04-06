@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
-  title: CookBook REST API
+  title: Something
   description: CookBook REST API allows you to manage your own recipes!
-  version: "1.0"
+  version: "1.0.11"
 tags:
 - name: Recipes
   externalDocs:
